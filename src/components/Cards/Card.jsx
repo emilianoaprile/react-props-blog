@@ -1,18 +1,36 @@
-import cardStyle from "./Card.module.css";
+import s from "./Card.module.css";
 
+const tagsStyle = {
+  'html': s.green,
+  'css': s.pink,
+  'js': s.yellow,
+  'php': s.blue,
+}
 function Card({ title, content, image, tags, published }) {
   return (
     <>
-      <div className={cardStyle.card}>
-        <div className={cardStyle.cardImage}>
-          <img src={image} alt="" />
+    {/* mostro solo i post che hanno published == true */}
+      {published && (
+        <div className={s.card}>
+          <div className={s.cardImage}>
+            <img src={image} alt="" />
+          </div>
+          <div className={s.cardContent}>
+            <h2 className="cardTitle">{title}</h2>
+            <p className="cardText">{content}</p>
+            <ul className={s.cardTags}>
+              {tags.map((tag, i) => (
+                <li 
+                  className = {tagsStyle[tag]} 
+                  key={i}>
+                    {`#${tag}`}
+                </li>
+              ))}
+            </ul>
+            <button className={s.cardBtn}>LEGGI DI PIÙ</button>
+          </div>
         </div>
-        <div className={cardStyle.cardContent}>
-          <h2 className="cardTitle">{title}</h2>
-          <p className="cardText">{content}</p>
-          <button className={cardStyle.cardBtn}>LEGGI DI PIÙ</button>
-        </div>
-      </div>
+      )}
     </>
   );
 }
