@@ -1,0 +1,14 @@
+.pageHeader {
+    padding: 20px;
+    text-align: center;
+    background-color: #646cff;
+    background-color: lightgray;
+    border-bottom: 2px solid black;
+  
+  }
+
+  .headerTitle {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: #1a1a1a;
+  }

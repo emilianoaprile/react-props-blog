@@ -1,0 +1,10 @@
+.cards {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.pageMain {
+  background-color: lightgray;
+}

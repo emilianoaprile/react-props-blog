@@ -1,0 +1,22 @@
+
+  
+  .card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: white;
+    box-shadow: 0px 0px 15px 20px rgba(0,0,0,0.1);
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 30px;
+  }
+  
+  .cardBtn {
+    color: #1a1a1a;
+  }
