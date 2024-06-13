@@ -7,4 +7,59 @@
 
 .pageMain {
   background-color: lightgray;
+  padding-top: 30px;
+}
+
+.tagsSection {
+  padding: 30px;
+  background-color: rgb(71, 71, 71);
+  border-radius: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 38px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.tag {
+  background-color: #6c6c6c;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: white;
+  transition: background-color 0.25s;
+  text-align: center;
+  vertical-align: auto;
+}
+
+.green {
+  color: greenyellow;
+}
+
+.pink {
+  color: rgb(255, 59, 157);
+}
+
+.yellow {
+  color: rgb(251, 255, 0);
+}
+
+.blue {
+  color: rgb(0, 81, 255);
 }

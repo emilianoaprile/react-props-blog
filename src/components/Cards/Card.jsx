@@ -7,13 +7,14 @@ const tagsStyle = {
   'php': s.blue,
 }
 function Card({ title, content, image, tags, published }) {
+
   return (
     <>
     {/* mostro solo i post che hanno published == true */}
       {published && (
         <div className={s.card}>
           <div className={s.cardImage}>
-            <img src={image === '' ? "https://placehold.co/400" : ''} alt="" />
+            <img src={image === '' ? "https://placehold.co/400" : ''} alt="Titolo" />
           </div>
           <div className={s.cardContent}>
             <h2 className="cardTitle">{title}</h2>
@@ -21,7 +22,7 @@ function Card({ title, content, image, tags, published }) {
             <ul className={s.cardTags}>
               {tags.map((tag, i) => (
                 <li 
-                  className = {tagsStyle[tag]} 
+                  className = {`${s.tag} ${tagsStyle[tag]}`} 
                   key={i}>
                     {`#${tag}`}
                 </li>

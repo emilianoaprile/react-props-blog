@@ -25,6 +25,19 @@
   gap: 5px;
 }
 
+.tag {
+  background-color: #434343;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: white;
+  transition: background-color 0.25s;
+  text-align: center;
+  vertical-align: auto;
+}
+
 .green {
   color: greenyellow;
 }
@@ -34,7 +47,7 @@
 }
 
 .yellow {
-  color: rgb(212, 255, 0);
+  color: rgb(251, 255, 0);
 }
 
 .blue {
