@@ -10,21 +10,24 @@ const tagsStyle = {
 }
 
 function Main() {
-  // funzione per ottenere i tag univoci da tutti i post
-  const getUniqueTags = () => {
-    const allTags = posts.reduce((acc, post) => {
-      // console.log(...post.tags);
-      acc.push(...post.tags);
-      // console.log(acc);
-      return acc;
-    }, []);
+  // // funzione per ottenere i tag univoci da tutti i post
+  // const getUniqueTags = () => {
+  //   const allTags = posts.reduce((acc, post) => {
+  //     // console.log(...post.tags);
+  //     acc.push(...post.tags);
+  //     // console.log(acc);
+  //     return acc;
+  //   }, []);
 
-    // uso Set per rimuovere i duplicati e poi lo converto in array
-    return Array.from(new Set(allTags));
-  };
+  //   // uso Set per rimuovere i duplicati e poi lo converto in array
+  //   return Array.from(new Set(allTags));
+  // };
 
-  const uniqueTags = getUniqueTags();
+  // const uniqueTags = getUniqueTags();
+  // // console.log(uniqueTags);
+  const uniqueTags = [...new Set(posts.flatMap(post => post.tags))];
   console.log(uniqueTags);
+  
   return (
     <>
       <main className={mainStyle.pageMain}>
