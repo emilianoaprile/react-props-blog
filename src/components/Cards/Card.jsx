@@ -13,7 +13,7 @@ function Card({ title, content, image, tags, published }) {
       {published && (
         <div className={s.card}>
           <div className={s.cardImage}>
-            <img src={image} alt="" />
+            <img src={image === '' ? "https://placehold.co/400" : ''} alt="" />
           </div>
           <div className={s.cardContent}>
             <h2 className="cardTitle">{title}</h2>
